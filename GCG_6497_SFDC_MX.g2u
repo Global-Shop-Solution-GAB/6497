@@ -1,0 +1,600 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fmSFDCMX..Create(BaseForm)
+Gui.fmSFDCMX..Caption("Custom SFDC Interface Maintenance")
+Gui.fmSFDCMX..Size(662,349)
+Gui.fmSFDCMX..MinX(0)
+Gui.fmSFDCMX..MinY(0)
+Gui.fmSFDCMX..Position(0,0)
+Gui.fmSFDCMX..AlwaysOnTop(False)
+Gui.fmSFDCMX..FontName("Tahoma")
+Gui.fmSFDCMX..FontSize(8.25)
+Gui.fmSFDCMX..ControlBox(True)
+Gui.fmSFDCMX..MaxButton(True)
+Gui.fmSFDCMX..MinButton(True)
+Gui.fmSFDCMX..MousePointer(0)
+Gui.fmSFDCMX..Moveable(True)
+Gui.fmSFDCMX..Sizeable(True)
+Gui.fmSFDCMX..ShowInTaskBar(True)
+Gui.fmSFDCMX..TitleBar(True)
+Gui.fmSFDCMX..Event(UnLoad,fmSFDCMX_UnLoad)
+Gui.fmSFDCMX.frmLabels.Create(Frame)
+Gui.fmSFDCMX.frmLabels.Enabled(True)
+Gui.fmSFDCMX.frmLabels.Visible(True)
+Gui.fmSFDCMX.frmLabels.Zorder(0)
+Gui.fmSFDCMX.frmLabels.Size(255,301)
+Gui.fmSFDCMX.frmLabels.Position(13,12)
+Gui.fmSFDCMX.frmLabels.Caption("Label Options")
+Gui.fmSFDCMX.frmLabels.FontName("Tahoma")
+Gui.fmSFDCMX.frmLabels.FontSize(8.25)
+Gui.fmSFDCMX.lblBtnCap.Create(Label,"Button Caption",True,84,13,0,13,8,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.txtBtnID3.Create(TextBox,"",True,76,20,0,133,124,True,2,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnID3.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnID3.Locked(True)
+Gui.fmSFDCMX.txtBtnID6.Create(TextBox,"",True,76,20,0,133,239,True,2,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnID6.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnID6.Locked(True)
+Gui.fmSFDCMX.txtBtnID5.Create(TextBox,"",True,76,20,0,133,204,True,2,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnID5.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnID5.Locked(True)
+Gui.fmSFDCMX.txtBtnID4.Create(TextBox,"",True,76,20,0,133,164,True,2,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnID4.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnID4.Locked(True)
+Gui.fmSFDCMX.txtBtnID2.Create(TextBox,"",True,76,20,0,133,85,True,2,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnID2.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnID2.Locked(True)
+Gui.fmSFDCMX.lblBtnCap5.Create(Label,"Button 5",True,48,13,0,13,186,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap5.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap5.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap5.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.txtBtnCap6.Create(TextBox,"",True,100,20,0,13,240,True,0,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnCap6.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap1.Create(Label,"Button 1",True,48,13,0,13,27,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap1.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap1.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap1.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.txtBtnCap5.Create(TextBox,"",True,100,20,0,13,202,True,0,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnCap5.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnCap4.Create(TextBox,"",True,100,20,0,13,163,True,0,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnCap4.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnCap3.Create(TextBox,"",True,100,20,0,13,124,True,0,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnCap3.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnCap2.Create(TextBox,"",True,100,20,0,13,85,True,0,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnCap2.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnCap1.Create(TextBox,"",True,100,20,0,13,46,True,0,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnCap1.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnBI.Create(Label,"Button BI ID",True,69,13,0,133,9,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnBI.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnBI.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnBI.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.txtBtnID1.Create(TextBox,"",True,76,20,0,133,46,True,2,"Tahoma",8.25,,1)
+Gui.fmSFDCMX.txtBtnID1.Parent("frmLabels")
+Gui.fmSFDCMX.txtBtnID1.Locked(True)
+Gui.fmSFDCMX.lblBtnCap6.Create(Label,"Button 6",True,48,13,0,13,224,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap6.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap6.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap6.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.lblBtnCap4.Create(Label,"Button 4",True,48,13,0,13,147,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap4.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap4.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap4.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.lblBtnCap3.Create(Label,"Button 3",True,48,13,0,13,108,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap3.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap3.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap3.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.lblBtnCap2.Create(Label,"Button 2",True,48,13,0,13,69,True,0,"Tahoma",8.25,,0,0)
+Gui.fmSFDCMX.lblBtnCap2.BorderStyle(0)
+Gui.fmSFDCMX.lblBtnCap2.Parent("frmLabels")
+Gui.fmSFDCMX.lblBtnCap2.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.cmdBtnID1.Create(Button)
+Gui.fmSFDCMX.cmdBtnID1.Enabled(True)
+Gui.fmSFDCMX.cmdBtnID1.Visible(True)
+Gui.fmSFDCMX.cmdBtnID1.Zorder(0)
+Gui.fmSFDCMX.cmdBtnID1.Size(27,23)
+Gui.fmSFDCMX.cmdBtnID1.Position(231,56)
+Gui.fmSFDCMX.cmdBtnID1.Caption("^")
+Gui.fmSFDCMX.cmdBtnID1.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnID1.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnID1.Event(Click,cmdBtnID_Click)
+Gui.fmSFDCMX.cmdBtnID2.Create(Button)
+Gui.fmSFDCMX.cmdBtnID2.Enabled(True)
+Gui.fmSFDCMX.cmdBtnID2.Visible(True)
+Gui.fmSFDCMX.cmdBtnID2.Zorder(0)
+Gui.fmSFDCMX.cmdBtnID2.Size(27,23)
+Gui.fmSFDCMX.cmdBtnID2.Position(231,95)
+Gui.fmSFDCMX.cmdBtnID2.Caption("^")
+Gui.fmSFDCMX.cmdBtnID2.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnID2.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnID2.Event(Click,cmdBtnID_Click)
+Gui.fmSFDCMX.cmdBtnID3.Create(Button)
+Gui.fmSFDCMX.cmdBtnID3.Enabled(True)
+Gui.fmSFDCMX.cmdBtnID3.Visible(True)
+Gui.fmSFDCMX.cmdBtnID3.Zorder(0)
+Gui.fmSFDCMX.cmdBtnID3.Size(27,23)
+Gui.fmSFDCMX.cmdBtnID3.Position(231,135)
+Gui.fmSFDCMX.cmdBtnID3.Caption("^")
+Gui.fmSFDCMX.cmdBtnID3.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnID3.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnID3.Event(Click,cmdBtnID_Click)
+Gui.fmSFDCMX.cmdBtnID4.Create(Button)
+Gui.fmSFDCMX.cmdBtnID4.Enabled(True)
+Gui.fmSFDCMX.cmdBtnID4.Visible(True)
+Gui.fmSFDCMX.cmdBtnID4.Zorder(0)
+Gui.fmSFDCMX.cmdBtnID4.Size(27,23)
+Gui.fmSFDCMX.cmdBtnID4.Position(231,174)
+Gui.fmSFDCMX.cmdBtnID4.Caption("^")
+Gui.fmSFDCMX.cmdBtnID4.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnID4.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnID4.Event(Click,cmdBtnID_Click)
+Gui.fmSFDCMX.cmdBtnID5.Create(Button)
+Gui.fmSFDCMX.cmdBtnID5.Enabled(True)
+Gui.fmSFDCMX.cmdBtnID5.Visible(True)
+Gui.fmSFDCMX.cmdBtnID5.Zorder(0)
+Gui.fmSFDCMX.cmdBtnID5.Size(27,23)
+Gui.fmSFDCMX.cmdBtnID5.Position(231,214)
+Gui.fmSFDCMX.cmdBtnID5.Caption("^")
+Gui.fmSFDCMX.cmdBtnID5.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnID5.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnID5.Event(Click,cmdBtnID_Click)
+Gui.fmSFDCMX.cmdBtnID6.Create(Button)
+Gui.fmSFDCMX.cmdBtnID6.Enabled(True)
+Gui.fmSFDCMX.cmdBtnID6.Visible(True)
+Gui.fmSFDCMX.cmdBtnID6.Zorder(0)
+Gui.fmSFDCMX.cmdBtnID6.Size(27,23)
+Gui.fmSFDCMX.cmdBtnID6.Position(231,249)
+Gui.fmSFDCMX.cmdBtnID6.Caption("^")
+Gui.fmSFDCMX.cmdBtnID6.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnID6.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnID6.Event(Click,cmdBtnID_Click)
+Gui.fmSFDCMX.cmdBtnSave.Create(Button)
+Gui.fmSFDCMX.cmdBtnSave.Enabled(True)
+Gui.fmSFDCMX.cmdBtnSave.Visible(True)
+Gui.fmSFDCMX.cmdBtnSave.Zorder(0)
+Gui.fmSFDCMX.cmdBtnSave.Size(69,23)
+Gui.fmSFDCMX.cmdBtnSave.Position(189,280)
+Gui.fmSFDCMX.cmdBtnSave.Caption("Save")
+Gui.fmSFDCMX.cmdBtnSave.FontName("Tahoma")
+Gui.fmSFDCMX.cmdBtnSave.FontSize(8.25)
+Gui.fmSFDCMX.cmdBtnSave.Event(Click,cmdBtnSave_Click)
+Gui.fmSFDCMX.cmdBtnSave.FontStyle(True,False,False,False,False)
+Gui.fmSFDCMX.frmLabels2.Create(Frame)
+Gui.fmSFDCMX.frmLabels2.Enabled(True)
+Gui.fmSFDCMX.frmLabels2.Visible(True)
+Gui.fmSFDCMX.frmLabels2.Zorder(0)
+Gui.fmSFDCMX.frmLabels2.Size(378,301)
+Gui.fmSFDCMX.frmLabels2.Position(281,12)
+Gui.fmSFDCMX.frmLabels2.Caption("Bin Location Restrictions")
+Gui.fmSFDCMX.frmLabels2.FontName("Tahoma")
+Gui.fmSFDCMX.frmLabels2.FontSize(8.25)
+Gui.fmSFDCMX.GsGcBinLoc.Create(GsGridControl)
+Gui.fmSFDCMX.GsGcBinLoc.Enabled(True)
+Gui.fmSFDCMX.GsGcBinLoc.Visible(True)
+Gui.fmSFDCMX.GsGcBinLoc.Zorder(0)
+Gui.fmSFDCMX.GsGcBinLoc.Size(367,254)
+Gui.fmSFDCMX.GsGcBinLoc.Position(6,7)
+Gui.fmSFDCMX.GsGcBinLoc.Event(RowCellClick,GsGcBinLoc_RowCellClick)
+Gui.fmSFDCMX.GsGcBinLoc.Parent("frmLabels2")
+Gui.fmSFDCMX.cmdTrmSave.Create(Button)
+Gui.fmSFDCMX.cmdTrmSave.Enabled(True)
+Gui.fmSFDCMX.cmdTrmSave.Visible(True)
+Gui.fmSFDCMX.cmdTrmSave.Zorder(0)
+Gui.fmSFDCMX.cmdTrmSave.Size(69,23)
+Gui.fmSFDCMX.cmdTrmSave.Position(304,268)
+Gui.fmSFDCMX.cmdTrmSave.Caption("Save")
+Gui.fmSFDCMX.cmdTrmSave.FontName("Tahoma")
+Gui.fmSFDCMX.cmdTrmSave.FontSize(8.25)
+Gui.fmSFDCMX.cmdTrmSave.Parent("frmLabels2")
+Gui.fmSFDCMX.cmdTrmSave.Event(Click,cmdTrmSave_Click)
+Gui.fmSFDCMX.cmdTrmSave.FontStyle(True,False,False,False,False)
+Gui.fmPrinters..Create(BaseForm)
+Gui.fmPrinters..Caption("Terminal Printers")
+Gui.fmPrinters..Size(240,381)
+Gui.fmPrinters..MinX(0)
+Gui.fmPrinters..MinY(0)
+Gui.fmPrinters..Position(0,0)
+Gui.fmPrinters..AlwaysOnTop(False)
+Gui.fmPrinters..FontName("Tahoma")
+Gui.fmPrinters..FontSize(8.25)
+Gui.fmPrinters..ControlBox(True)
+Gui.fmPrinters..MaxButton(False)
+Gui.fmPrinters..MinButton(False)
+Gui.fmPrinters..MousePointer(0)
+Gui.fmPrinters..Moveable(True)
+Gui.fmPrinters..Sizeable(False)
+Gui.fmPrinters..ShowInTaskBar(True)
+Gui.fmPrinters..TitleBar(True)
+Gui.fmPrinters..Event(UnLoad,fmPrinters_UnLoad)
+Gui.fmPrinters.lblTRMNL.Create(Label,"Label",True,25,13,0,8,7,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblTRMNL.BorderStyle(0)
+Gui.fmPrinters.lblPrint1.Create(Label,"Label",True,25,13,0,8,32,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint1.BorderStyle(0)
+Gui.fmPrinters.lblPrint2.Create(Label,"Label",True,25,13,0,8,71,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint2.BorderStyle(0)
+Gui.fmPrinters.lblPrint3.Create(Label,"Label",True,25,13,0,8,110,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint3.BorderStyle(0)
+Gui.fmPrinters.lblPrint4.Create(Label,"Label",True,25,13,0,8,149,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint4.BorderStyle(0)
+Gui.fmPrinters.lblPrint5.Create(Label,"Label",True,25,13,0,8,188,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint5.BorderStyle(0)
+Gui.fmPrinters.lblPrint6.Create(Label,"Label",True,25,13,0,8,227,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint6.BorderStyle(0)
+Gui.fmPrinters.ddlPrint1.Create(DropDownList)
+Gui.fmPrinters.ddlPrint1.Enabled(True)
+Gui.fmPrinters.ddlPrint1.Visible(True)
+Gui.fmPrinters.ddlPrint1.Zorder(0)
+Gui.fmPrinters.ddlPrint1.Size(222,20)
+Gui.fmPrinters.ddlPrint1.Position(8,48)
+Gui.fmPrinters.ddlPrint1.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint1.FontSize(8.25)
+Gui.fmPrinters.cmdPrintSave.Create(Button)
+Gui.fmPrinters.cmdPrintSave.Enabled(True)
+Gui.fmPrinters.cmdPrintSave.Visible(True)
+Gui.fmPrinters.cmdPrintSave.Zorder(0)
+Gui.fmPrinters.cmdPrintSave.Size(75,23)
+Gui.fmPrinters.cmdPrintSave.Position(155,319)
+Gui.fmPrinters.cmdPrintSave.Caption("Save")
+Gui.fmPrinters.cmdPrintSave.FontName("Tahoma")
+Gui.fmPrinters.cmdPrintSave.FontSize(8.25)
+Gui.fmPrinters.cmdPrintSave.FontStyle(True,False,False,False,False)
+Gui.fmPrinters.cmdPrintSave.Event(Click,cmdPrintSave_Click)
+Gui.fmPrinters.ddlPrint2.Create(DropDownList)
+Gui.fmPrinters.ddlPrint2.Enabled(True)
+Gui.fmPrinters.ddlPrint2.Visible(True)
+Gui.fmPrinters.ddlPrint2.Zorder(0)
+Gui.fmPrinters.ddlPrint2.Size(222,20)
+Gui.fmPrinters.ddlPrint2.Position(8,87)
+Gui.fmPrinters.ddlPrint2.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint2.FontSize(8.25)
+Gui.fmPrinters.ddlPrint3.Create(DropDownList)
+Gui.fmPrinters.ddlPrint3.Enabled(True)
+Gui.fmPrinters.ddlPrint3.Visible(True)
+Gui.fmPrinters.ddlPrint3.Zorder(0)
+Gui.fmPrinters.ddlPrint3.Size(222,20)
+Gui.fmPrinters.ddlPrint3.Position(8,126)
+Gui.fmPrinters.ddlPrint3.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint3.FontSize(8.25)
+Gui.fmPrinters.ddlPrint4.Create(DropDownList)
+Gui.fmPrinters.ddlPrint4.Enabled(True)
+Gui.fmPrinters.ddlPrint4.Visible(True)
+Gui.fmPrinters.ddlPrint4.Zorder(0)
+Gui.fmPrinters.ddlPrint4.Size(222,20)
+Gui.fmPrinters.ddlPrint4.Position(8,165)
+Gui.fmPrinters.ddlPrint4.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint4.FontSize(8.25)
+Gui.fmPrinters.ddlPrint5.Create(DropDownList)
+Gui.fmPrinters.ddlPrint5.Enabled(True)
+Gui.fmPrinters.ddlPrint5.Visible(True)
+Gui.fmPrinters.ddlPrint5.Zorder(0)
+Gui.fmPrinters.ddlPrint5.Size(222,20)
+Gui.fmPrinters.ddlPrint5.Position(8,204)
+Gui.fmPrinters.ddlPrint5.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint5.FontSize(8.25)
+Gui.fmPrinters.ddlPrint6.Create(DropDownList)
+Gui.fmPrinters.ddlPrint6.Enabled(True)
+Gui.fmPrinters.ddlPrint6.Visible(True)
+Gui.fmPrinters.ddlPrint6.Zorder(0)
+Gui.fmPrinters.ddlPrint6.Size(222,20)
+Gui.fmPrinters.ddlPrint6.Position(8,243)
+Gui.fmPrinters.ddlPrint6.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint6.FontSize(8.25)
+Gui.fmPrinters.lblPrint7.Create(Label,"NCMR",True,29,13,0,8,269,True,0,"Tahoma",8.25,,0,0)
+Gui.fmPrinters.lblPrint7.BorderStyle(0)
+Gui.fmPrinters.ddlPrint7.Create(DropDownList)
+Gui.fmPrinters.ddlPrint7.Enabled(True)
+Gui.fmPrinters.ddlPrint7.Visible(True)
+Gui.fmPrinters.ddlPrint7.Zorder(0)
+Gui.fmPrinters.ddlPrint7.Size(222,20)
+Gui.fmPrinters.ddlPrint7.Position(8,285)
+Gui.fmPrinters.ddlPrint7.FontName("Tahoma")
+Gui.fmPrinters.ddlPrint7.FontSize(8.25)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sDDL.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+v.Local.sReg.Declare
+v.Local.sSQL.Declare
+v.Local.i.Declare
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+f.Global.Registry.ReadValue("SUPERVSR",v.Caller.CompanyCode,"6497MX",1000,1000,5,"",v.Local.sReg)
+f.Intrinsic.Control.CallSub(DDL_Populate)
+
+f.Intrinsic.String.Split(v.Local.sReg,"*!*",v.Local.sReg)
+
+f.Intrinsic.Control.If(v.Local.sReg(1),<>,"OOB")
+gui.fmSFDCMX.txtBtnCap1.Text(v.Local.sReg(0))
+gui.fmSFDCMX.txtBtnID1.Text(v.Local.sReg(1))
+gui.fmSFDCMX.txtBtnCap2.Text(v.Local.sReg(2))
+gui.fmSFDCMX.txtBtnID2.Text(v.Local.sReg(3))
+gui.fmSFDCMX.txtBtnCap3.Text(v.Local.sReg(4))
+gui.fmSFDCMX.txtBtnID3.Text(v.Local.sReg(5))
+gui.fmSFDCMX.txtBtnCap4.Text(v.Local.sReg(6))
+gui.fmSFDCMX.txtBtnID4.Text(v.Local.sReg(7))
+gui.fmSFDCMX.txtBtnCap5.Text(v.Local.sReg(8))
+gui.fmSFDCMX.txtBtnID5.Text(v.Local.sReg(9))
+gui.fmSFDCMX.txtBtnCap6.Text(v.Local.sReg(10))
+gui.fmSFDCMX.txtBtnID6.Text(v.Local.sReg(11))
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.fmSFDCMX!txtBtnID1.Text,=,"OOB")
+	gui.fmSFDCMX.txtBtnID1.Text("")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.fmSFDCMX!txtBtnID2.Text,=,"OOB")
+	gui.fmSFDCMX.txtBtnID2.Text("")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.fmSFDCMX!txtBtnID3.Text,=,"OOB")
+	gui.fmSFDCMX.txtBtnID3.Text("")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.fmSFDCMX!txtBtnID4.Text,=,"OOB")
+	gui.fmSFDCMX.txtBtnID4.Text("")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.fmSFDCMX!txtBtnID5.Text,=,"OOB")
+	gui.fmSFDCMX.txtBtnID5.Text("")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.Screen.fmSFDCMX!txtBtnID6.Text,=,"OOB")
+	gui.fmSFDCMX.txtBtnID6.Text("")
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Intrinsic.String.Build("Select x.TERMINAL, x.WID as WORKSTATION, y.BINLOC from GLOBALCOMMON.GUI_GROUP_MEMBERSHIP as x left join GLOBAL{0}.GCG_6497_SFDC_TRMNL as y on x.TERMINAL = y.TERMINAL and rtrim(x.WID) = rtrim(y.WORKSTATION)",v.Caller.CompanyCode,v.Local.sSQL)
+f.Data.Datatable.CreateFromSQL("dtTRMNL","conx",v.Local.sSQL,true)
+
+f.ODBC.Connection!conx.Close
+
+f.Data.Datatable.AddColumn("dtTRMNL","PRINTER","string")
+
+f.Data.DataView.Create("dtTRMNL","dvTRMNL")
+
+gui.fmSFDCMX.GsGcBinLoc.AddGridviewFromDataview("gvTRMNL","dtTRMNL","dvTRMNL")
+
+gui.fmSFDCMX.GsGcBinLoc.SetGridviewProperty("gvTRMNL","AllowAddRows",true)
+
+gui.fmSFDCMX.GsGcBinLoc.SuspendLayout()
+
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","Caption","")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","HeaderFontBold","TRUE")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","HeaderHAlignment","CENTER")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","CellHAlignment","CENTER")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","MinWidth",)
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","MaxWidth",)
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","DisplayCustomNumeric","$###,##0.00")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","ReadOnly","TRUE")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","AllowEdit","FALSE")
+'gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","","VisibleIndex",v.Local.i)
+'f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","Caption","Terminal")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","HeaderFontBold","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","HeaderHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","CellHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","MinWidth",65)
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","ReadOnly","FALSE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","AllowEdit","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","TERMINAL","VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","Caption","Workstation")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","HeaderFontBold","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","HeaderHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","CellHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","MinWidth",125)
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","ReadOnly","FALSE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","AllowEdit","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","WORKSTATION","VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","Caption","Loc")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","HeaderFontBold","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","HeaderHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","CellHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","MinWidth",45)
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","ReadOnly","FALSE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","AllowEdit","TRUE")
+Gui.fmSFDCMX.GsGcBinLoc.ColumnEdit("gvTRMNL","BINLOC","DropDownList",v.Global.sDDL)
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","BINLOC","VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","Caption","Printer")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","HeaderFontBold","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","HeaderHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","CellHAlignment","CENTER")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","MinWidth",45)
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","ReadOnly","TRUE")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","AllowEdit","FALSE")
+Gui.fmSFDCMX.GsGcBinLoc.ColumnEdit("gvTRMNL","PRINTER","EditorButton","Select")
+gui.fmSFDCMX.GsGcBinLoc.SetColumnProperty("gvTRMNL","PRINTER","VisibleIndex",v.Local.i)
+f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmSFDCMX.GsGcBinLoc.ResumeLayout()
+
+gui.fmSFDCMX.GsGcBinLoc.MainView("gvTRMNL")
+
+gui.fmSFDCMX..Visible(true)
+Program.Sub.Main.End
+
+Program.Sub.cmdBtnID_Click.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.sTitle.Declare
+v.Local.iWidth.Declare
+v.Local.sRet.Declare
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Intrinsic.String.Split("ID*!*Description*!*File","*!*",v.Local.sTitle)
+f.Intrinsic.String.Split("800*!*1200*!*1200","*!*",v.Local.iWidth)
+
+f.Intrinsic.String.Build("(select distinct x.RPT_ID, rtrim(x.DESCRIPTION) as DESCRIPTION, rtrim(x.CRYSTAL_FILE_NAME) as RPT_FILE from GLOBAL{0}.V_BI_RPT as x) union all (select y.REPORT_ID as RPT_ID, rtrim(y.DESCRIPTION) as DESCRIPTION, rtrim(y.REPORT_FILE) as RPT_FILE from GLOBALCOMMON.BIR_USER_SEQ as y where y.COMPANY = '{0}')",v.Caller.CompanyCode,v.Local.sSQL)
+F.Intrinsic.UI.Browser("Report ID Browser","conx",v.Local.sSQL,v.Local.sTitle,v.Local.iWidth,v.Local.sRet)
+
+f.Intrinsic.Control.If(v.Local.sRet,<>,"***CANCEL***")
+	
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	
+	f.Intrinsic.Control.SelectCase(v.Args.ControlName)
+	f.Intrinsic.Control.Case("CMDBTNID1")
+	gui.fmSFDCMX.txtBtnID1.Text(v.Local.sRet(0))
+	f.Intrinsic.Control.Case("CMDBTNID2")
+	gui.fmSFDCMX.txtBtnID2.Text(v.Local.sRet(0))
+	f.Intrinsic.Control.Case("CMDBTNID3")
+	gui.fmSFDCMX.txtBtnID3.Text(v.Local.sRet(0))
+	f.Intrinsic.Control.Case("CMDBTNID4")
+	gui.fmSFDCMX.txtBtnID4.Text(v.Local.sRet(0))
+	f.Intrinsic.Control.Case("CMDBTNID5")
+	gui.fmSFDCMX.txtBtnID5.Text(v.Local.sRet(0))
+	f.Intrinsic.Control.Case("CMDBTNID6")
+	gui.fmSFDCMX.txtBtnID6.Text(v.Local.sRet(0))
+	f.Intrinsic.Control.EndSelect
+
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.Close
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBtnID_Click.End
+
+Program.Sub.cmdBtnSave_Click.Start
+v.Local.sReg.Declare
+
+f.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}*!*{10}*!*{11}",v.Screen.fmSFDCMX!txtBtnCap1.Text,v.Screen.fmSFDCMX!txtBtnID1.Text,v.Screen.fmSFDCMX!txtBtnCap2.Text,v.Screen.fmSFDCMX!txtBtnID2.Text,v.Screen.fmSFDCMX!txtBtnCap3.Text,v.Screen.fmSFDCMX!txtBtnID3.Text,v.Screen.fmSFDCMX!txtBtnCap4.Text,v.Screen.fmSFDCMX!txtBtnID4.Text,v.Screen.fmSFDCMX!txtBtnCap5.Text,v.Screen.fmSFDCMX!txtBtnID5.Text,v.Screen.fmSFDCMX!txtBtnCap6.Text,v.Screen.fmSFDCMX!txtBtnID6.Text,v.Local.sReg)
+
+f.Global.Registry.AddValue("SUPERVSR",v.Caller.CompanyCode,"6497MX",1000,1000,false,v.Local.sReg,true,1,1,v.Ambient.Date,v.Ambient.Now)
+Program.Sub.cmdBtnSave_Click.End
+
+Program.Sub.fmSFDCMX_UnLoad.Start
+gui.fmSFDCMX..Visible(false)
+
+f.Intrinsic.Control.End
+Program.Sub.fmSFDCMX_UnLoad.End
+
+Program.Sub.fmPrinters_UnLoad.Start
+gui.fmPrinters..Visible(false)
+Program.Sub.fmPrinters_UnLoad.End
+
+Program.Sub.cmdPrintSave_Click.Start
+v.Local.sPrinters.Declare
+v.Local.sSQL.Declare
+
+f.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}",v.Screen.fmPrinters!ddlPrint1.Text,v.Screen.fmPrinters!ddlPrint2.Text,v.Screen.fmPrinters!ddlPrint3.Text,v.Screen.fmPrinters!ddlPrint4.Text,v.Screen.fmPrinters!ddlPrint5.Text,v.Screen.fmPrinters!ddlPrint6.Text,v.Screen.fmPrinters!ddlPrint7.Text,v.Local.sPrinters)
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+	f.Intrinsic.String.Build("UPDATE GCG_6497_SFDC_TRMNL set PRINTERS = '{0}' where TERMINAL = '{1}'",v.Local.sPrinters,v.Screen.fmPrinters!lblTRMNL.Caption,v.Local.sSQL)
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	
+f.ODBC.Connection!conx.Close
+Program.Sub.cmdPrintSave_Click.End
+
+Program.Sub.DDL_Populate.Start
+v.Local.sRet.Declare
+v.Local.i.Declare
+
+gui.fmPrinters.ddlPrint1.ClearItems
+gui.fmPrinters.ddlPrint2.ClearItems
+gui.fmPrinters.ddlPrint3.ClearItems
+gui.fmPrinters.ddlPrint4.ClearItems
+gui.fmPrinters.ddlPrint5.ClearItems
+gui.fmPrinters.ddlPrint6.ClearItems
+gui.fmPrinters.ddlPrint7.ClearItems
+
+gui.fmPrinters.ddlPrint1.AddItem("")
+gui.fmPrinters.ddlPrint2.AddItem("")
+gui.fmPrinters.ddlPrint3.AddItem("")
+gui.fmPrinters.ddlPrint4.AddItem("")
+gui.fmPrinters.ddlPrint5.AddItem("")
+gui.fmPrinters.ddlPrint6.AddItem("")
+gui.fmPrinters.ddlPrint7.AddItem("")
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+'f.Intrinsic.Printer.GetPrinters(v.Local.sRet)
+'f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+
+f.ODBC.Connection!conx.ExecuteAndReturn("Select rtrim(PRINTERNAME) from GLOBALCOMMON.SERVER_PRINTERS",v.Local.sRet)
+f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+
+f.Intrinsic.Control.For(v.Local.i,0,v.Local.sRet.UBound,1)
+gui.fmPrinters.ddlPrint1.AddItem(v.Local.sRet(v.Local.i))
+gui.fmPrinters.ddlPrint2.AddItem(v.Local.sRet(v.Local.i))
+gui.fmPrinters.ddlPrint3.AddItem(v.Local.sRet(v.Local.i))
+gui.fmPrinters.ddlPrint4.AddItem(v.Local.sRet(v.Local.i))
+gui.fmPrinters.ddlPrint5.AddItem(v.Local.sRet(v.Local.i))
+gui.fmPrinters.ddlPrint6.AddItem(v.Local.sRet(v.Local.i))
+gui.fmPrinters.ddlPrint7.AddItem(v.Local.sRet(v.Local.i))
+f.Intrinsic.Control.Next(v.Local.i)
+	
+	f.ODBC.Connection!conx.ExecuteAndReturn("select rtrim(LOCATION) from V_LOCATIONS",v.Local.sRet)
+
+f.ODBC.Connection!conx.Close
+	
+f.Intrinsic.String.Replace(v.Local.sRet,"#$#","*!*",v.Global.sDDL)
+f.Intrinsic.String.Build("*!*{0}",v.Global.sDDL,v.Global.sDDL)
+
+Program.Sub.DDL_Populate.End
+
+Program.Sub.GsGcBinLoc_RowCellClick.Start
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+
+f.Intrinsic.Control.If(v.Args.Column,=,"PRINTER")
+
+	gui.fmPrinters.lblTRMNL.Caption(v.DataTable.dtTRMNL(v.Args.RowIndex).TERMINAL!FieldValTrim)
+	gui.fmPrinters.lblPrint1.Caption(v.Screen.fmSFDCMX!txtBtnCap1.Text)
+	gui.fmPrinters.lblPrint2.Caption(v.Screen.fmSFDCMX!txtBtnCap2.Text)
+	gui.fmPrinters.lblPrint3.Caption(v.Screen.fmSFDCMX!txtBtnCap3.Text)
+	gui.fmPrinters.lblPrint4.Caption(v.Screen.fmSFDCMX!txtBtnCap4.Text)
+	gui.fmPrinters.lblPrint5.Caption(v.Screen.fmSFDCMX!txtBtnCap5.Text)
+	gui.fmPrinters.lblPrint6.Caption(v.Screen.fmSFDCMX!txtBtnCap6.Text)
+	
+	f.ODBC.Connection!conx.OpenCompanyConnection
+
+	f.Intrinsic.String.Build("Select rtrim(PRINTERS) from GCG_6497_SFDC_TRMNL where TERMINAL = '{0}'",v.DataTable.dtTRMNL(v.Args.RowIndex).TERMINAL!FieldValTrim,v.Local.sSQL)
+	f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+	
+	f.ODBC.Connection!conx.Close
+	
+	f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF.not)
+		f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+		gui.fmPrinters.ddlPrint1.Text(v.Local.sRet(0))
+		gui.fmPrinters.ddlPrint2.Text(v.Local.sRet(1))
+		gui.fmPrinters.ddlPrint3.Text(v.Local.sRet(2))
+		gui.fmPrinters.ddlPrint4.Text(v.Local.sRet(3))
+		gui.fmPrinters.ddlPrint5.Text(v.Local.sRet(4))
+		gui.fmPrinters.ddlPrint6.Text(v.Local.sRet(5))
+	f.Intrinsic.Control.EndIf
+	
+	gui.fmPrinters..Visible(True)
+	
+f.Intrinsic.Control.EndIf
+Program.Sub.GsGcBinLoc_RowCellClick.End
+
+Program.Sub.cmdTrmSave_Click.Start
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Data.Datatable.SaveToDB("dtTRMNL","conx","GCG_6497_SFDC_TRMNL","TERMINAL",256,"TERMINAL@!@TERMINAL*!*WORKSTATION@!@WORKSTATION*!*BINLOC@!@BINLOC")
+
+f.ODBC.Connection!conx.Close
+Program.Sub.cmdTrmSave_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8315.16327$}$1
+${$6$}$rcole$}$20221102112730987$}$ZUe18EWXbmRoTBVoeWbrFXakeGdGvm0OxpT3MXXEkwk8/X3Ef83IoZWExEattidgHrZUDF1XEA0=
+Program.Sub.Comments.End
