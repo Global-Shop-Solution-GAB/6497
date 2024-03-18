@@ -1,0 +1,89 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fmJIP..Create(BaseForm)
+Gui.fmJIP..Caption("Scheduling Menu - Jobs In Process")
+Gui.fmJIP..Size(1024,720)
+Gui.fmJIP..MinX(0)
+Gui.fmJIP..MinY(0)
+Gui.fmJIP..Position(0,0)
+Gui.fmJIP..AlwaysOnTop(False)
+Gui.fmJIP..FontName("Tahoma")
+Gui.fmJIP..FontSize(8.25)
+Gui.fmJIP..ControlBox(True)
+Gui.fmJIP..MaxButton(True)
+Gui.fmJIP..MinButton(True)
+Gui.fmJIP..MousePointer(0)
+Gui.fmJIP..Moveable(True)
+Gui.fmJIP..Sizeable(True)
+Gui.fmJIP..ShowInTaskBar(True)
+Gui.fmJIP..TitleBar(True)
+Gui.fmJIP..Event(UnLoad,fmJIP_UnLoad)
+Gui.fmJIP.GsGcJIP.Create(GsGridControl)
+Gui.fmJIP.GsGcJIP.Enabled(True)
+Gui.fmJIP.GsGcJIP.Visible(True)
+Gui.fmJIP.GsGcJIP.Zorder(0)
+Gui.fmJIP.GsGcJIP.Size(1024,690)
+Gui.fmJIP.GsGcJIP.Position(0,0)
+Gui.fmJIP.GsGcJIP.Dock(5)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Data.DataTable.CreateFromSQL("dtJIP","conx","Select * from GCG_6497_JIP")
+
+f.Data.DataTable.AddColumn("dtJIP","NAME","string")
+
+f.Data.Dictionary.CreateFromSQL("NAME","conx","select EMPLOYEE, rtrim(NAME) from V_EMPLOYEE_MSTR")
+f.Data.Dictionary.SetDefaultReturn("NAME","")
+f.Data.DataTable.FillFromDictionary("dtJIP","NAME","EMPLOYEE","NAME")
+f.Data.Dictionary.Close("NAME")
+
+f.ODBC.Connection!conx.Close
+
+f.Data.DataTable.AddExpressionColumn("dtJIP","OPHLP","string","iif(HELP_EMP = '',' OPERATOR','HELPER')")
+f.Data.DataTable.AddExpressionColumn("dtJIP","EMP_NAME","string","TERMINAL+' - '+OPHLP+' Employee: '+EMPLOYEE+' - '+NAME")
+
+f.Data.DataView.Create("dtJIP","dvJIP",22)
+
+gui.fmJIP.GsGcJIP.AddGridviewFromDataview("gvJIP","dtJIP","dvJIP")
+gui.fmJIP.GsGcJIP.SetGridviewProperty("gvJIP",v.Enum.GridViewPropertyNames!ColumnAutoWidth,true)
+
+gui.fmJIP.GsGcJIP.SetColumnProperty("gvJIP","EMP_NAME","GroupIndex",0)
+gui.fmJIP.GsGcJIP.SetColumnProperty("gvJIP","EMP_NAME","Caption","Terminal")
+gui.fmJIP.GsGcJIP.SetColumnProperty("gvJIP","TERMINAL","Visible",false)
+gui.fmJIP.GsGcJIP.SetColumnProperty("gvJIP","EMPLOYEE","Visible",false)
+gui.fmJIP.GsGcJIP.SetColumnProperty("gvJIP","NAME","Visible",false)
+gui.fmJIP.GsGcJIP.SetColumnProperty("gvJIP","HELP_EMP","Visible",false)
+
+
+gui.fmJIP.GsGcJIP.MainView("gvJIP")
+
+gui.fmJIP..Visible(true)
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.fmJIP_UnLoad.Start
+gui.fmJIP..Visible(false)
+
+f.Intrinsic.Control.End
+Program.Sub.fmJIP_UnLoad.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8298.22803$}$1
+${$6$}$rcole$}$20220921141911369$}$ZUe18EWXbmRoTBVoeWbrFXakeGdGvm0OTI0yeJ+Bm3+sqj9SZmf60GC6mcSOUDSlLBFBC7hEHzo=
+Program.Sub.Comments.End
