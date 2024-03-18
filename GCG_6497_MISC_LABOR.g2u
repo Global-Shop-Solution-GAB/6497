@@ -1,0 +1,31 @@
+﻿Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Intrinsic.String.Build("select JOB, SUFFIX, cast(sum(HOURS_ESTIMATED*if(CREW_SIZE = '0','0',CREW_SIZE-1)) as numeric(16,6)), cast(sum(DOLLARS_ESTIMATED*if(CREW_SIZE = '0','0',CREW_SIZE-1)) as numeric (16,6)) from JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and LMO = 'L' and SEQ not like '99%' group by JOB, SUFFIX",v.Passed.009000,v.Passed.009001,v.Local.sSQL)
+f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+
+f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF.not)
+
+'	f.Intrinsic.String.Build("Update JOB_OPERATIONS set HOURS_ESTIMATED = '{0}', DOLLARS_ESTIMATED = '{1}' where JOB = '{2}' and SUFFIX = '{3}' and SEQ = '996000'",v.Local.sRet(2),v.Local.sRet(3),v.Passed.009000,v.Passed.009001,v.Local.sSQL)
+	f.Intrinsic.String.Build("Update JOB_OPERATIONS set HOURS_ESTIMATED = '{0}', DOLLARS_ESTIMATED = '0' where JOB = '{1}' and SUFFIX = '{2}' and SEQ = '996000'",v.Local.sRet(2),v.Passed.009000,v.Passed.009001,v.Local.sSQL)
+	f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+	
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.Close
+
+Program.Sub.Main.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8413.19752$}$1
+${$6$}$rcole$}$20230309163346197$}$ZUe18EWXbmRoTBVoeWbrFagM+XZUVh5owCxLooJjm27WzaYSejiT5fX16Efmqj7TWT4rvIG7sFA=
+Program.Sub.Comments.End
