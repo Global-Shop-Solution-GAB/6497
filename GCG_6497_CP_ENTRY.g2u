@@ -1,0 +1,734 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fmCPEntry..Create(BaseForm)
+Gui.fmCPEntry..Caption("MFG Data Control Plan Item Master")
+Gui.fmCPEntry..Size(1025,720)
+Gui.fmCPEntry..MinX(0)
+Gui.fmCPEntry..MinY(0)
+Gui.fmCPEntry..Position(0,0)
+Gui.fmCPEntry..AlwaysOnTop(False)
+Gui.fmCPEntry..FontName("Tahoma")
+Gui.fmCPEntry..FontSize(8.25)
+Gui.fmCPEntry..ControlBox(True)
+Gui.fmCPEntry..MaxButton(True)
+Gui.fmCPEntry..MinButton(True)
+Gui.fmCPEntry..MousePointer(0)
+Gui.fmCPEntry..Moveable(True)
+Gui.fmCPEntry..Sizeable(True)
+Gui.fmCPEntry..ShowInTaskBar(True)
+Gui.fmCPEntry..TitleBar(True)
+Gui.fmCPEntry..Event(UnLoad,fmCPEntry_UnLoad)
+Gui.fmCPEntry.frmCtrl.Create(Frame)
+Gui.fmCPEntry.frmCtrl.Enabled(True)
+Gui.fmCPEntry.frmCtrl.Visible(True)
+Gui.fmCPEntry.frmCtrl.Zorder(0)
+Gui.fmCPEntry.frmCtrl.Size(1008,100)
+Gui.fmCPEntry.frmCtrl.Position(9,7)
+Gui.fmCPEntry.frmCtrl.Caption("")
+Gui.fmCPEntry.frmCtrl.FontName("Tahoma")
+Gui.fmCPEntry.frmCtrl.FontSize(8.25)
+Gui.fmCPEntry.frmCtrl.Anchor(13)
+Gui.fmCPEntry.txtPart.Create(TextBox,"",True,100,20,0,5,72,True,0,"Tahoma",8.25,,1)
+Gui.fmCPEntry.txtPart.Parent("frmCtrl")
+Gui.fmCPEntry.txtPart.Anchor(7)
+Gui.fmCPEntry.txtPart.Locked(True)
+Gui.fmCPEntry.txtEditBy.Create(TextBox,"",True,100,20,0,619,30,True,0,"Tahoma",8.25,,1)
+Gui.fmCPEntry.txtEditBy.Anchor(7)
+Gui.fmCPEntry.txtEditBy.Parent("frmCtrl")
+Gui.fmCPEntry.txtEditBy.Locked(True)
+Gui.fmCPEntry.lbl1.Create(Label,"Part #",True,36,13,0,5,55,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl1.BorderStyle(0)
+Gui.fmCPEntry.lbl1.Parent("frmCtrl")
+Gui.fmCPEntry.lbl1.Anchor(7)
+Gui.fmCPEntry.lbl1.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.txtDesc.Create(TextBox,"",True,192,20,0,144,72,True,0,"Tahoma",8.25,,1)
+Gui.fmCPEntry.txtDesc.Parent("frmCtrl")
+Gui.fmCPEntry.txtDesc.Anchor(7)
+Gui.fmCPEntry.txtDesc.Locked(True)
+Gui.fmCPEntry.txtWC.Create(TextBox,"",True,47,20,0,343,72,True,0,"Tahoma",8.25,,1)
+Gui.fmCPEntry.txtWC.Parent("frmCtrl")
+Gui.fmCPEntry.txtWC.Anchor(7)
+Gui.fmCPEntry.txtWC.Locked(True)
+Gui.fmCPEntry.txtDoc.Create(TextBox,"",True,99,20,0,421,72,True,0,"Tahoma",8.25,,1)
+Gui.fmCPEntry.txtDoc.Parent("frmCtrl")
+Gui.fmCPEntry.txtDoc.Anchor(7)
+Gui.fmCPEntry.txtDoc.Locked(True)
+Gui.fmCPEntry.cmdBrwDoc.Create(Button)
+Gui.fmCPEntry.cmdBrwDoc.Enabled(True)
+Gui.fmCPEntry.cmdBrwDoc.Visible(True)
+Gui.fmCPEntry.cmdBrwDoc.Zorder(0)
+Gui.fmCPEntry.cmdBrwDoc.Size(23,23)
+Gui.fmCPEntry.cmdBrwDoc.Position(526,70)
+Gui.fmCPEntry.cmdBrwDoc.Caption("^")
+Gui.fmCPEntry.cmdBrwDoc.FontName("Tahoma")
+Gui.fmCPEntry.cmdBrwDoc.FontSize(8.25)
+Gui.fmCPEntry.cmdBrwDoc.Parent("frmCtrl")
+Gui.fmCPEntry.cmdBrwDoc.Anchor(7)
+Gui.fmCPEntry.cmdBrwDoc.Event(Click,cmdBrwDoc_Click)
+Gui.fmCPEntry.lbl2.Create(Label,"Description",True,64,13,0,144,55,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl2.BorderStyle(0)
+Gui.fmCPEntry.lbl2.Parent("frmCtrl")
+Gui.fmCPEntry.lbl2.Anchor(7)
+Gui.fmCPEntry.lbl2.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdBrwPart.Create(Button)
+Gui.fmCPEntry.cmdBrwPart.Enabled(True)
+Gui.fmCPEntry.cmdBrwPart.Visible(True)
+Gui.fmCPEntry.cmdBrwPart.Zorder(0)
+Gui.fmCPEntry.cmdBrwPart.Size(23,23)
+Gui.fmCPEntry.cmdBrwPart.Position(111,70)
+Gui.fmCPEntry.cmdBrwPart.Caption("^")
+Gui.fmCPEntry.cmdBrwPart.FontName("Tahoma")
+Gui.fmCPEntry.cmdBrwPart.FontSize(8.25)
+Gui.fmCPEntry.cmdBrwPart.Parent("frmCtrl")
+Gui.fmCPEntry.cmdBrwPart.Anchor(7)
+Gui.fmCPEntry.cmdBrwPart.Event(Click,cmdBrwPart_Click)
+Gui.fmCPEntry.txtLength.Create(TextBox,"",True,47,20,0,556,72,True,0,"Tahoma",8.25,,1)
+Gui.fmCPEntry.txtLength.Parent("frmCtrl")
+Gui.fmCPEntry.txtLength.Anchor(7)
+Gui.fmCPEntry.lbl5.Create(Label,"Length",True,39,13,0,556,55,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl5.BorderStyle(0)
+Gui.fmCPEntry.lbl5.Parent("frmCtrl")
+Gui.fmCPEntry.lbl5.Anchor(7)
+Gui.fmCPEntry.lbl5.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdBrwWC.Create(Button)
+Gui.fmCPEntry.cmdBrwWC.Enabled(True)
+Gui.fmCPEntry.cmdBrwWC.Visible(True)
+Gui.fmCPEntry.cmdBrwWC.Zorder(0)
+Gui.fmCPEntry.cmdBrwWC.Size(23,23)
+Gui.fmCPEntry.cmdBrwWC.Position(395,70)
+Gui.fmCPEntry.cmdBrwWC.Caption("^")
+Gui.fmCPEntry.cmdBrwWC.FontName("Tahoma")
+Gui.fmCPEntry.cmdBrwWC.FontSize(8.25)
+Gui.fmCPEntry.cmdBrwWC.Parent("frmCtrl")
+Gui.fmCPEntry.cmdBrwWC.Anchor(7)
+Gui.fmCPEntry.cmdBrwWC.Event(Click,cmdBrwWC_Click)
+Gui.fmCPEntry.lbl4.Create(Label,"MFG Doc",True,48,13,0,421,55,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl4.BorderStyle(0)
+Gui.fmCPEntry.lbl4.Parent("frmCtrl")
+Gui.fmCPEntry.lbl4.Anchor(7)
+Gui.fmCPEntry.lbl4.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.lbl3.Create(Label,"WC",True,18,13,0,355,55,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl3.BorderStyle(0)
+Gui.fmCPEntry.lbl3.Parent("frmCtrl")
+Gui.fmCPEntry.lbl3.Anchor(7)
+Gui.fmCPEntry.lbl3.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdSave.Create(Button)
+Gui.fmCPEntry.cmdSave.Enabled(True)
+Gui.fmCPEntry.cmdSave.Visible(True)
+Gui.fmCPEntry.cmdSave.Zorder(0)
+Gui.fmCPEntry.cmdSave.Size(75,23)
+Gui.fmCPEntry.cmdSave.Position(843,11)
+Gui.fmCPEntry.cmdSave.Caption("Save")
+Gui.fmCPEntry.cmdSave.FontName("Tahoma")
+Gui.fmCPEntry.cmdSave.FontSize(8.25)
+Gui.fmCPEntry.cmdSave.Parent("frmCtrl")
+Gui.fmCPEntry.cmdSave.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdSave.Anchor(11)
+Gui.fmCPEntry.cmdSave.Event(Click,cmdSave_Click)
+Gui.fmCPEntry.cmdCopy.Create(Button)
+Gui.fmCPEntry.cmdCopy.Enabled(True)
+Gui.fmCPEntry.cmdCopy.Visible(True)
+Gui.fmCPEntry.cmdCopy.Zorder(0)
+Gui.fmCPEntry.cmdCopy.Size(75,23)
+Gui.fmCPEntry.cmdCopy.Position(843,39)
+Gui.fmCPEntry.cmdCopy.Caption("Copy")
+Gui.fmCPEntry.cmdCopy.FontName("Tahoma")
+Gui.fmCPEntry.cmdCopy.FontSize(8.25)
+Gui.fmCPEntry.cmdCopy.Parent("frmCtrl")
+Gui.fmCPEntry.cmdCopy.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdCopy.Anchor(11)
+Gui.fmCPEntry.cmdCopy.Event(Click,cmdCopy_Click)
+Gui.fmCPEntry.cmdClose.Create(Button)
+Gui.fmCPEntry.cmdClose.Enabled(True)
+Gui.fmCPEntry.cmdClose.Visible(True)
+Gui.fmCPEntry.cmdClose.Zorder(0)
+Gui.fmCPEntry.cmdClose.Size(75,23)
+Gui.fmCPEntry.cmdClose.Position(925,11)
+Gui.fmCPEntry.cmdClose.Caption("Close")
+Gui.fmCPEntry.cmdClose.FontName("Tahoma")
+Gui.fmCPEntry.cmdClose.FontSize(8.25)
+Gui.fmCPEntry.cmdClose.Parent("frmCtrl")
+Gui.fmCPEntry.cmdClose.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdClose.Anchor(11)
+Gui.fmCPEntry.cmdClose.Event(Click,cmdClose_Click)
+Gui.fmCPEntry.cmdOpen.Create(Button)
+Gui.fmCPEntry.cmdOpen.Enabled(True)
+Gui.fmCPEntry.cmdOpen.Visible(True)
+Gui.fmCPEntry.cmdOpen.Zorder(0)
+Gui.fmCPEntry.cmdOpen.Size(75,50)
+Gui.fmCPEntry.cmdOpen.Position(925,39)
+Gui.fmCPEntry.cmdOpen.Caption("Open All")
+Gui.fmCPEntry.cmdOpen.FontName("Tahoma")
+Gui.fmCPEntry.cmdOpen.FontSize(8.25)
+Gui.fmCPEntry.cmdOpen.Parent("frmCtrl")
+Gui.fmCPEntry.cmdOpen.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdOpen.Anchor(11)
+Gui.fmCPEntry.cmdOpen.Event(Click,cmdOpen_Click)
+Gui.fmCPEntry.cmdDelete.Create(Button)
+Gui.fmCPEntry.cmdDelete.Enabled(True)
+Gui.fmCPEntry.cmdDelete.Visible(True)
+Gui.fmCPEntry.cmdDelete.Zorder(0)
+Gui.fmCPEntry.cmdDelete.Size(75,23)
+Gui.fmCPEntry.cmdDelete.Position(843,66)
+Gui.fmCPEntry.cmdDelete.Caption("Delete")
+Gui.fmCPEntry.cmdDelete.FontName("Tahoma")
+Gui.fmCPEntry.cmdDelete.FontSize(8.25)
+Gui.fmCPEntry.cmdDelete.Parent("frmCtrl")
+Gui.fmCPEntry.cmdDelete.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.cmdDelete.Anchor(11)
+Gui.fmCPEntry.cmdDelete.Event(Click,cmdDelete_Click)
+Gui.fmCPEntry.lbl6.Create(Label,"Last Edited By:",True,82,13,0,619,13,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl6.BorderStyle(0)
+Gui.fmCPEntry.lbl6.Anchor(7)
+Gui.fmCPEntry.lbl6.Parent("frmCtrl")
+Gui.fmCPEntry.lbl6.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.lbl7.Create(Label,"Date Changed:",True,82,13,0,619,55,True,0,"Tahoma",8.25,,0,0)
+Gui.fmCPEntry.lbl7.BorderStyle(0)
+Gui.fmCPEntry.lbl7.Anchor(7)
+Gui.fmCPEntry.lbl7.Parent("frmCtrl")
+Gui.fmCPEntry.lbl7.FontStyle(True,False,False,False,False)
+Gui.fmCPEntry.dtpEditDate.Create(DatePicker)
+Gui.fmCPEntry.dtpEditDate.Enabled(True)
+Gui.fmCPEntry.dtpEditDate.Visible(True)
+Gui.fmCPEntry.dtpEditDate.Zorder(0)
+Gui.fmCPEntry.dtpEditDate.Size(100,20)
+Gui.fmCPEntry.dtpEditDate.Position(619,72)
+Gui.fmCPEntry.dtpEditDate.CheckBox(False)
+Gui.fmCPEntry.dtpEditDate.FontName("Tahoma")
+Gui.fmCPEntry.dtpEditDate.FontSize(8.25)
+Gui.fmCPEntry.dtpEditDate.Parent("frmCtrl")
+Gui.fmCPEntry.dtpEditDate.Value(1/1/1900)
+Gui.fmCPEntry.cmdRefresh.Create(Button)
+Gui.fmCPEntry.cmdRefresh.Enabled(True)
+Gui.fmCPEntry.cmdRefresh.Visible(True)
+Gui.fmCPEntry.cmdRefresh.Zorder(0)
+Gui.fmCPEntry.cmdRefresh.Size(50,50)
+Gui.fmCPEntry.cmdRefresh.Position(786,39)
+Gui.fmCPEntry.cmdRefresh.Anchor(11)
+Gui.fmCPEntry.cmdRefresh.Caption("REFRESH")
+Gui.fmCPEntry.cmdRefresh.FontName("Tahoma")
+Gui.fmCPEntry.cmdRefresh.FontSize(8.25)
+Gui.fmCPEntry.cmdRefresh.Parent("frmCtrl")
+Gui.fmCPEntry.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.fmCPEntry.frmGsGc.Create(Frame)
+Gui.fmCPEntry.frmGsGc.Enabled(True)
+Gui.fmCPEntry.frmGsGc.Visible(True)
+Gui.fmCPEntry.frmGsGc.Zorder(0)
+Gui.fmCPEntry.frmGsGc.Size(1008,569)
+Gui.fmCPEntry.frmGsGc.Position(9,113)
+Gui.fmCPEntry.frmGsGc.Caption("")
+Gui.fmCPEntry.frmGsGc.FontName("Tahoma")
+Gui.fmCPEntry.frmGsGc.FontSize(8.25)
+Gui.fmCPEntry.frmGsGc.Anchor(15)
+Gui.fmCPEntry.GsGcCPData.Create(GsGridControl)
+Gui.fmCPEntry.GsGcCPData.Enabled(True)
+Gui.fmCPEntry.GsGcCPData.Visible(True)
+Gui.fmCPEntry.GsGcCPData.Zorder(0)
+Gui.fmCPEntry.GsGcCPData.Size(1008,569)
+Gui.fmCPEntry.GsGcCPData.Position(0,0)
+Gui.fmCPEntry.GsGcCPData.Parent("frmGsGc")
+Gui.fmCPEntry.GsGcCPData.Dock(5)
+Gui.fmCPEntry.GsGcCPData.Event(RowCellClick,GsGcCPData_RowCellClick)
+Gui.fmCPEntry.GsGcCPData.Event(CellValueChanged,GsGcCPData_CellValueChanged)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+
+f.Intrinsic.Control.CallSub(Load_CP)
+
+gui.fmCPEntry..Visible(true)
+Program.Sub.Main.End
+
+Program.Sub.fmCPEntry_UnLoad.Start
+gui.fmCPEntry..Visible(false)
+
+f.Intrinsic.Control.End
+Program.Sub.fmCPEntry_UnLoad.End
+
+Program.Sub.cmdBrwPart_Click.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+v.Local.sPart.Declare
+
+f.Intrinsic.UI.Browser(100,"",v.Local.sRet)
+
+f.Intrinsic.Control.If(v.Local.sRet,<>,"***CANCEL***")
+
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	gui.fmCPEntry.txtPart.Text(v.Local.sRet(0))
+	gui.fmCPEntry.txtDesc.Text(v.Local.sRet(3))
+	
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrwPart_Click.End
+
+Program.Sub.cmdBrwWC_Click.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sRet.Declare
+v.Local.sPart.Declare
+
+f.Intrinsic.UI.Browser(400,"",v.Local.sRet)
+
+f.Intrinsic.Control.If(v.Local.sRet,<>,"***CANCEL***")
+
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	gui.fmCPEntry.txtWC.Text(v.Local.sRet(0))
+	
+	f.Intrinsic.Control.If(v.Screen.fmCPEntry!txtPart.Text,<>,"")
+		f.ODBC.Connection!conx.OpenCompanyConnection
+	
+		f.Intrinsic.String.Build("Select distinct WORKCENTER, DRAWING_NUM, LENGTH, LAST_CHG_BY, DATE_LAST_CHG from GCG_6497_CP_DATA where PART = '{0}' and WORKCENTER = '{1}' order by PART, CP_SEQ",v.Screen.fmCPEntry!txtPart.Text,v.Screen.fmCPEntry!txtWC.Text,v.Local.sSQL)
+		f.ODBC.Connection!conx.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+		
+		f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF.not)
+			f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+			f.Intrinsic.String.Split(v.Local.sRet(0),"*!*",v.Local.sRet)
+			gui.fmCPEntry.txtWC.Text(v.Local.sRet(0))
+			gui.fmCPEntry.txtDoc.Text(v.Local.sRet(1))
+			gui.fmCPEntry.txtLength.Text(v.Local.sRet(2))
+			gui.fmCPEntry.txtEditBy.Text(v.Local.sRet(3))
+			gui.fmCPEntry.dtpEditDate.Value(v.Local.sRet(4))
+			gui.fmCPEntry.cmdSave.Caption("Save")
+			gui.fmCPEntry.cmdDelete.Enabled(true)
+			
+		f.Intrinsic.Control.Else
+		
+			gui.fmCPEntry.cmdSave.Caption("Create")
+			gui.fmCPEntry.cmdDelete.Enabled(false)
+			
+		f.Intrinsic.Control.EndIf
+	
+		f.ODBC.Connection!conx.Close
+		
+		f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+		
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrwWC_Click.End
+
+Program.Sub.cmdBrwDoc_Click.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.sTitle.Declare
+v.Local.iWidth.Declare
+v.Local.sRet.Declare
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Intrinsic.String.Split("LOC*!*LOT*!*BIN*!*HEAT*!*SERIAL","*!*",v.Local.sTitle)
+f.Intrinsic.String.Split("400*!*400*!*600*!*1000*!*1000","*!*",v.Local.iWidth)
+
+f.Intrinsic.String.Build("select LOCATION, LOT, BIN, HEAT, SERIAL_NUMBER from V_ITEM_MASTER where rtrim(PART) = '{0}'",v.Screen.8130Entry!txt8.Text,v.Local.sSQL)
+F.Intrinsic.UI.Browser("Serial Browser","conx",v.Local.sSQL,v.Local.sTitle,v.Local.iWidth,v.Local.sRet)
+
+f.ODBC.Connection!conx.Close
+
+f.Intrinsic.Control.If(v.Local.sRet,<>,"***CANCEL***")
+	
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	gui.8130Entry.txt10.Text(v.Local.sRet(4))
+
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBrwDoc_Click.End
+Program.Sub.cmdSave_Click.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSQL.Declare
+v.Local.fLength.Declare
+
+v.Local.fLength.Set(v.Screen.fmCPEntry!txtLength.Text)
+
+f.Data.DataTable.RemoveColumn("dtCP","DELETE")
+
+f.Data.DataTable.AcceptChanges("dtCP")
+
+f.Data.DataTable.SetValue("dtCP",-1,"PART",v.Screen.fmCPEntry!txtPart.Text,"DESCRIPTION",v.Screen.fmCPEntry!txtDesc.Text,"WORKCENTER",v.Screen.fmCPEntry!txtWC.Text,"DRAWING_NUM",v.Screen.fmCPEntry!txtDoc.Text,"LENGTH",v.Local.fLength,"LAST_CHG_BY",v.Caller.User,"DATE_LAST_CHG",v.Ambient.Date)
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Data.DataTable.SaveToDB("dtCP","conx","GCG_6497_CP_DATA","ID",256,"")
+
+f.ODBC.Connection!conx.Close
+
+f.Data.DataTable.AddColumn("dtCP","DELETE","string")
+
+gui.fmCPEntry.txtEditBy.Text(v.Caller.User)
+gui.fmCPEntry.dtpEditDate.Value(v.Ambient.Date)
+
+f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.cmdCopy_Click.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sRet.Declare
+v.Local.sPart.Declare
+
+f.Intrinsic.UI.Browser(100,"",v.Local.sRet)
+
+f.Intrinsic.Control.If(v.Local.sRet,<>,"***CANCEL***")
+	f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	gui.fmCPEntry.txtPart.Text(v.Local.sRet(0))
+	gui.fmCPEntry.txtDesc.Text(v.Local.sRet(3))
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	f.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.End 
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdCopy_Click.End
+
+Program.Sub.cmdDelete_Click.Start
+Program.Sub.cmdDelete_Click.End
+
+Program.Sub.cmdClose_Click.Start
+gui.fmCPEntry.txtPart.Text("")
+gui.fmCPEntry.txtDesc.Text("")
+gui.fmCPEntry.txtWC.Text("")
+gui.fmCPEntry.txtDoc.Text("")
+gui.fmCPEntry.txtLength.Text("")
+gui.fmCPEntry.txtEditBy.Text("")
+gui.fmCPEntry.dtpEditDate.Value("1/1/1900")
+Program.Sub.cmdClose_Click.End
+
+Program.Sub.cmdOpen_Click.Start
+f.Intrinsic.Control.SelectCase(v.Screen.fmCPEntry!cmdOpen.Caption)
+
+f.Intrinsic.Control.Case("Open All")
+
+	gui.fmCPEntry.txtPart.Text("ALL")
+	gui.fmCPEntry.txtDesc.Text("Control Plan GridView")
+	gui.fmCPEntry.txtWC.Text("")
+	gui.fmCPEntry.txtDoc.Text("")
+	gui.fmCPEntry.txtEditBy.Text("")
+	gui.fmCPEntry.dtpEditDate.Value("1/1/1900")
+	
+	gui.fmCPEntry.cmdOpen.Caption("Open Part")
+	
+	f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+
+f.Intrinsic.Control.Case("Open Part")
+	
+	gui.fmCPEntry.txtPart.Text("")
+	gui.fmCPEntry.txtDesc.Text("")
+	gui.fmCPEntry.txtWC.Text("")
+	gui.fmCPEntry.txtDoc.Text("")
+	gui.fmCPEntry.txtEditBy.Text("")
+	gui.fmCPEntry.dtpEditDate.Value("1/1/1900")
+	
+	gui.fmCPEntry.cmdOpen.Caption("Open All")
+	
+	f.Intrinsic.Control.CallSub(cmdBrwPart_Click)
+	
+f.Intrinsic.Control.EndSelect
+Program.Sub.cmdOpen_Click.End
+
+Program.Sub.Load_CP.Start
+v.Local.sSQL.Declare
+
+f.Intrinsic.Control.If(v.DataTable.dtCP.Exists)
+	f.Data.DataView.Close("dtCP","dvCP")
+	f.Data.DataTable.Close("dtCP")
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.OpenCompanyConnection
+
+f.Intrinsic.Control.If(v.Screen.fmCPEntry!txtPart.Text,=,"")
+	f.Data.Datatable.CreateFromSQL("dtCP","conx","Select * from GCG_6497_CP_DATA where PART = 'XXXXXXXXXX'",true)
+f.Intrinsic.Control.ElseIf(v.Screen.fmCPEntry!txtPart.Text,=,"ALL")
+	f.Data.Datatable.CreateFromSQL("dtCP","conx","Select * from GCG_6497_CP_DATA order by PART, CP_SEQ",true)
+f.Intrinsic.Control.Else
+	f.Intrinsic.String.Build("Select * from GCG_6497_CP_DATA where PART = '{0}' order by PART, CP_SEQ",v.Screen.fmCPEntry!txtPart.Text,v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtCP","conx",v.Local.sSQL,true)
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.Close
+
+f.Data.Datatable.AddColumn("dtCP","DELETE","string")
+
+f.Data.DataView.Create("dtCP","dvCP")
+
+f.Intrinsic.Control.CallSub(Format_CP)
+Program.Sub.Load_CP.End
+
+Program.Sub.Load_DDL.Start
+Program.Sub.Load_DDL.End
+
+Program.Sub.Format_CP.Start
+v.Local.i.Declare
+
+gui.fmCPEntry.GsGcCPData.AddGridviewFromDataview("gvCP","dtCP","dvCP")
+
+gui.fmCPEntry.GsGcCPData.SuspendLayout
+gui.fmCPEntry.GsGcCPData.Visible(false)
+	
+	gui.fmCPEntry.GsGcCPData.SetGridviewProperty("gvCP","AllowAddRows",True)
+	gui.fmCPEntry.GsGcCPData.SetGridviewProperty("gvCP","AllowDeleteRows",True)
+	gui.fmCPEntry.GsGcCPData.SetGridviewProperty("gvCP","OptionsViewRowAutoHeight",True)
+	
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","Caption","")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","HeaderFontBold","TRUE")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","HeaderHAlignment","CENTER")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","CellHAlignment","CENTER")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","MinWidth",)
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","MaxWidth",)
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","DisplayCustomNumeric","$###,##0.00")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","ReadOnly","TRUE")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","AllowEdit","FALSE")
+'	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","","VisibleIndex",v.Local.i)
+'	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","ID","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PART","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WORKCENTER","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DRAWING_NUM","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DIM_LET_PROC_NUM","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DESCRIPTION","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","UM","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WORK_INST","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WORK_DOCS","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PASS_FAIL","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","OAL_LENGTH","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","OAL_WIDTH","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","LENGTH","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WIDTH","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DATE_LAST_CHG","Visible",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","LAST_CHG_BY","Visible",false)
+	
+	f.Intrinsic.Control.If(v.Screen.fmCPEntry!txtPart.Text,=,"ALL")
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","ID","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PART","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WORKCENTER","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DRAWING_NUM","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DIM_LET_PROC_NUM","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DESCRIPTION","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","UM","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WORK_INST","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WORK_DOCS","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PASS_FAIL","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","OAL_LENGTH","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","OAL_WIDTH","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","LENGTH","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","WIDTH","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DATE_LAST_CHG","Visible",true)
+		gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","LAST_CHG_BY","Visible",true)
+	f.Intrinsic.Control.EndIf
+
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","Caption","Process")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","MinWidth",65)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","PROCESS","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","Caption","Insp Type")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","MinWidth",85)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_TYPE","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","Caption","Critical")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CRITICAL","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","Caption","Insp Device")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","MinWidth",85)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","INSP_DEVICE","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","Caption","Dim")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SIZE","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","Caption","Seq")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","CP_SEQ","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","Caption","Spec")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPECIFICATION","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","Caption","+")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_PLUS","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","Caption","-")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","TLRNC_MINUS","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","Caption","Frequency")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","MinWidth",45)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","FREQUENCY","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","Caption","SPC Check")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","MinWidth",35)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","SPC_LOG","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","Caption","Comments")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","CellHAlignment","LEFT")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","CellWordWrap",Wrap)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","MinWidth",200)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","ReadOnly",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","AllowEdit",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","COMMENTS","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+	
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","Caption","Del")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","HeaderFontBold",false)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","HeaderHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","CellHAlignment","CENTER")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","MinWidth",35)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","ReadOnly",true)
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","AllowEdit",false)
+	gui.fmCPEntry.GsGcCPData.ColumnEdit("gvCP","DELETE","EditorButton","DEL")
+	gui.fmCPEntry.GsGcCPData.SetColumnProperty("gvCP","DELETE","VisibleIndex",v.Local.i)
+	f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fmCPEntry.GsGcCPData.ResumeLayout
+gui.fmCPEntry.GsGcCPData.Visible(true)
+
+gui.fmCPEntry.GsGcCPData.MainView("gvCP")
+Program.Sub.Format_CP.End
+
+Program.Sub.cmdRefresh_Click.Start
+gui.fmCPEntry..Enabled(false)
+f.Intrinsic.UI.InvokeWaitDialog("Please wait...Loading...","Loading...")
+f.Intrinsic.Control.CallSub(Load_CP)
+f.Intrinsic.UI.CloseWaitDialog
+gui.fmCPEntry..Enabled(true)
+Program.Sub.cmdRefresh_Click.End
+Program.Sub.GsGcCPData_RowCellClick.Start
+v.Local.sSQL.Declare
+
+f.Intrinsic.Control.SelectCase(v.Args.Column)
+
+f.Intrinsic.Control.Case("DELETE")
+
+	f.Intrinsic.UI.Msgbox("Are you sure you want to delete this row?","WARNING!",4,v.Local.sRet)
+
+	f.Intrinsic.Control.If(v.Local.sRet,=,v.Ambient.MsgBoxYes)
+	
+		f.Intrinsic.Control.If(v.DataTable.dtCP(v.Args.RowIndex).ID!FieldVal,>,0)
+			
+			f.ODBC.Connection!conx.OpenCompanyConnection
+			
+			f.Intrinsic.String.Build("Delete from GCG_6497_CP_DATA where ID = '{0}'",v.DataTable.dtCP(v.Args.RowIndex).ID!FieldVal,v.Local.sSQL)
+			f.ODBC.Connection!conx.Execute(v.Local.sSQL)
+			
+			f.ODBC.Connection!conx.Close
+			
+		f.Intrinsic.Control.EndIf
+		
+		f.Data.DataTable.DeleteRow("dtCP",v.Args.RowIndex)
+		f.Data.DataTable.AcceptChanges("dtCP")
+	
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.EndSelect
+Program.Sub.GsGcCPData_RowCellClick.End
+
+Program.Sub.GsGcCPData_CellValueChanged.Start
+Program.Sub.GsGcCPData_CellValueChanged.End
+
+Program.Sub.Comments.Start
+${$5$}$20.1.8238.20344$}$1
+${$6$}$rcole$}$20220809152837732$}$ZUe18EWXbmRoTBVoeWbrFXakeGdGvm0OdjoAqCMoDYWV9yB3aVowQV7FB+LOzpzxettEHqPu9cs=
+Program.Sub.Comments.End
